@@ -5,15 +5,11 @@ namespace Controllers;
 require_once('libraries/models/Comment.php');
 require_once('libraries/utils.php');
 require_once('libraries/models/Article.php');
+require_once('libraries/controllers/Controller.php');
 
-class Comment
+class Comment extends Controller
 {
-    protected $models;
-
-    public function __contructor()
-    {
-        $this->model = new \Models\Comment();
-    }
+    protected $modelName = "\Models\Comment"; // \Models\Comment::class
     public function insert()
     {
         $articleModel= new \Models\Article();
