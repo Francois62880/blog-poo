@@ -7,7 +7,7 @@
  * Ensuite, on va pouvoir effectivement supprimer l'article et rediriger vers la page d'accueil
  */
 
-require_once('libraries/controllers/Article.php');
+require_once('libraries/autoload.php');
 
 $controller= new \controllers\article();
 $controller->delete();
